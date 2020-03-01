@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="fonts/montserrat-medium.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-medium.woff" as="font">
+  <link rel="preload" href="fonts/montserrat-semi-bold.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-semi-bold.woff" as="font">
+  <link rel="shortcut icon" type="image/ico" sizes="16x16" href="favicon.ico">
+  <title>Тестовое задание</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="./js/plugins/picturefill.min.js" async></script>
+</head>
+<body>
+  <div style="display: none">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+  <header class="page-header page-header--menu-closed">
+    <div class="page-header__container">
+      <button class="page-header__open-button js-open-menu" type="button" aria-label="open menu"><span></span></button>
+    </div>
+    <div class="page-header__menu-wrap">
+      <div class="page-header__menu-top page-header__menu-top--search-closed">
+        <div class="page-header__top-wrap">
+          <div class="page-header__language language">
+            <button class="language__button js-open-language-menu" type="button">
+              <img class="language__current-flag" width="16" height="11" src="./img/icons/icon-flag-ru.svg" alt="current's language flag">
+              <span class="language__name">Ru</span>
+              <span class="language__icon"></span>
+            </button>
+            <div class="language__wrap language__wrap--hidden">
+              <ul class="language__list">
+                <li class="language__item language__item--current">
+                  <button class="language__variant-button" id="ru" type="button">
+                    <svg class="language__variant-icon" width="16" height="11">
+                      <use xlink:href="#icon-flag-ru"></use>
+                    </svg>
+                    <span class="language__variant-name">Ru</span>
+                  </button>
+                </li>
+                <li class="language__item">
+                  <button class="language__variant-button" id="en" type="button">
+                    <svg class="language__variant-icon" width="16" height="11">
+                      <use xlink:href="#icon-flag-en"></use>
+                    </svg>
+                    <span class="language__variant-name">En</span>
+                  </button>
+                </li>
+                <li class="language__item">
+                  <button class="language__variant-button" id="be" type="button">
+                    <svg class="language__variant-icon" width="16" height="11">
+                      <use xlink:href="#icon-flag-be"></use>
+                    </svg>
+                    <span class="language__variant-name">Be</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="page-header__search search">
+            <form class="search__form" method="GET">
+              <fieldset class="search__item">
+                <input class="search__input" id="search-filed" type="text" placeholder="What are you looking for?">
+                <label class="search-label" for="search-filed"><span class="visually-hidden">search field</span></label>
+              </fieldset>
+              <button class="search__close js-close-search-field" type="button" aria-label="close search field"><span></span></button>
+            </form>
+          </div>
+        </div>
+        <div class="page-header__top-buttons-wrap">
+          <button class="page-header__search-button js-search-open" type="button" aria-label="open search field">
+            <svg class="page-header__search-icon" width="16" height="16">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+          </button>
+          <button class="page-header__close-button js-close-menu" type="button" aria-label="close menu"><span></span></button>
+        </div>
+      </div>
+      <nav class="page-header__nav main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--services">
+            <button class="main-nav__button" type="button">
+              <span class="main-nav__button-wrap">
+                <span class="main-nav__icon main-nav__icon--active"></span>
+                <span class="main-nav__button-text">Services</span>
+              </span>
+              <span class="main-nav__icon"></span>
+            </button>
+            <div class="main-nav__menu-wrap">
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </li>
+          <li class="main-nav__item main-nav__item--managed-it">
+            <button class="main-nav__button" type="button">
+              <span class="main-nav__button-wrap">
+                <span class="main-nav__icon main-nav__icon--active"></span>
+                <span class="main-nav__button-text">Managed IT</span>
+              </span>
+              <span class="main-nav__icon"></span>
+            </button>
+            <div class="main-nav__menu-wrap">
+              <ul class="main-nav__inner-menu-list">
+                <li class="main-nav__inner-menu-item">
+                  <button class="main-nav__inner-button" type="button">
+                    <span class="main-nav__inner-button-text">Platforms</span>
+                    <span class="main-nav__icon"></span>
+                  </button>
+                  <div class="main-nav__inner-links-list-wrap">
+                    <ul class="main-nav__inner-links-list">
+                      <li class="main-nav__inner-link-item">
+                        <a class="main-nav__inner-link" href="#">Aws</a>
+                      </li>
+                      <li class="main-nav__inner-link-item">
+                        <a class="main-nav__inner-link" href="#">GCP</a>
+                      </li>
+                      <li class="main-nav__inner-link-item">
+                        <a class="main-nav__inner-link" href="#">Azure</a>
+                      </li>
+                      <li class="main-nav__inner-link-item">
+                        <a class="main-nav__inner-link" href="#">AlibabaCloud</a>
+                      </li>
+                      <li class="main-nav__inner-link-item">
+                        <a class="main-nav__inner-link" href="#">MTS</a>
+                      </li>
+                      <li class="main-nav__inner-link-item">
+                        <a class="main-nav__inner-link" href="#">VMware, KVM</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__inner-menu-item">
+                  <a class="main-nav__inner-link" href="#">DevOps</a>
+                </li>
+                <li class="main-nav__inner-menu-item">
+                  <a class="main-nav__inner-link" href="#">Servers</a>
+                </li>
+                <li class="main-nav__inner-menu-item">
+                  <a class="main-nav__inner-link" href="#">Systems</a>
+                </li>
+                <li class="main-nav__inner-menu-item">
+                  <a class="main-nav__inner-link" href="#">Applications</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="main-nav__item main-nav__item--hardware">
+            <button class="main-nav__button" type="button">
+              <span class="main-nav__button-wrap">
+                <span class="main-nav__icon main-nav__icon--active"></span>
+                <span class="main-nav__button-text">Hardware</span>
+              </span>
+              <span class="main-nav__icon"></span>
+            </button>
+          </li>
+          <li class="main-nav__item main-nav__item--company">
+            <button class="main-nav__button" type="button">
+              <span class="main-nav__button-wrap">
+                <span class="main-nav__icon main-nav__icon--active"></span>
+                <span class="main-nav__button-text">Company</span>
+              </span>
+              <span class="main-nav__icon"></span>
+            </button>
+          </li>
+          <li class="main-nav__item main-nav__item--for-partners">
+            <a class="main-nav__link" href="#">For Partners</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="page-header__contacts">
+        <div class="page-header__contacts-title">
+          <svg class="page-header__point-icon" width="8.2" height="10.1">
+            <use xlink:href="#icon-point"></use>
+          </svg>
+          <span>Contacts</span>
+        </div>
+        <a class="page-header__phone" href="tel:+78007775522">
+          <svg class="page-header__phone-icon" width="9" height="9">
+            <use xlink:href="#icon-phone"></use>
+          </svg>
+          <span>8 800 777 55 22</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <h1 class="visually-hidden">Тестовое задание</h1>
+  </main>
+  <footer></footer>
+  <script src="./js/script.js"></script>
+</body>
+</html>
